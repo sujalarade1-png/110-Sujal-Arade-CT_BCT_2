@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sujal Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0a0a0a;
+    color:#fff;
+}
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+}
+
+header h1{
+    font-size:28px;
+    color:#00f0ff;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#00f0ff;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+    min-width:300px;
+}
+
+.hero-text h2{
+    font-size:50px;
+    line-height:1.2;
+}
+
+.hero-text h2 span{
+    color:#00f0ff;
+}
+
+.hero-text p{
+    margin:20px 0;
+    color:#bbb;
+    font-size:18px;
+    max-width:550px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00f0ff;
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f0ff;
+}
+
+.hero-img{
+    flex:1;
+    text-align:center;
+    min-width:300px;
+}
+
+.hero-img img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #00f0ff;
+    box-shadow:0 0 35px #00f0ff;
+}
+
+.title{
+    font-size:35px;
+    margin-bottom:40px;
+    color:#00f0ff;
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#bbb;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.skills-box,
+.project-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    padding:25px;
+    border-radius:18px;
+    transition:0.3s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#00f0ff;
+    box-shadow:0 0 20px rgba(0,240,255,0.25);
+}
+
+.card h3{
+    color:#00f0ff;
+    margin-bottom:15px;
+}
+
+.card p, .card li{
+    color:#bbb;
+    line-height:1.7;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#bbb;
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    border-top:1px solid #111;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-text h2{
+        font-size:38px;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
+
+    .hero-img img{
+        width:280px;
+        height:280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sujal</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Sujal</span></h2>
+        <p>
+            Mechanical Engineering Student passionate about design, innovation,
+            manufacturing, and modern technologies. Focused on building a successful
+            engineering career with technical excellence.
+        </p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="Sujal.jpeg" alt="Sujal">
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="title">About Me</h2>
+    <p>
+        I am a dedicated Mechanical Engineering student with strong interest in CAD design,
+        manufacturing systems, automation, and problem solving. I enjoy learning new tools,
+        creating engineering projects, and improving my technical knowledge continuously.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills-box">
+        <div class="card">
+            <h3>Technical Skills</h3>
+            <p>AutoCAD</p>
+            <p>Fusion 360</p>
+            <p>Python Basics</p>
+            <p>MS Excel</p>
+            <p>Canva</p>
+            <p>C++</p>
+            <p>Recap Pro</p>
+        </div>
+
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <p>Problem Solving</p>
+            <p>Communication</p>
+            <p>Time Management</p>
+            <p>Quick Learner</p>
+        </div>
+
+        <div class="card">
+            <h3>Education</h3>
+            <p>Mechanical Engineering Student</p>
+            <p>12th - 71.32%</p>
+            <p>10th - 69.80%</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="project-box">
+
+        <div class="card">
+            <h3>Material Handling System</h3>
+            <p>
+                Automated conveyor-based material transportation system
+                for industrial productivity improvement.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Solar Water Pump</h3>
+            <p>
+                Eco-friendly solar powered pumping system for irrigation
+                and water supply solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Personal responsive portfolio website built using HTML and CSS.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="title">Contact Me</h2>
+    <p>Email: sujalarade1@gmail.com</p>
+    <p>Phone: +91 8087404431</p>
+    <p>Pune, Maharashtra</p>
+</section>
+
+<footer>
+    © 2026 Sujal Portfolio | All Rights Reserved
+</footer>
+
+</body>
+</html>
